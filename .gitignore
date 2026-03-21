@@ -1,0 +1,66 @@
+# Environment variables
+.env
+.env.example
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+context.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation
+.docs/
+
+# Other
+*.swp
+*.swo
+*.swo1
+*.swo2
+*.swo3
+*.swo4
+*.swo5
+*.swo6
+*.swo7
+*.swo8
+*.swo9
+*.swo10
+*.swo11
+*.swo12
+*.swo13
+*.swo14
+*.swo15
+*.swo16
+*.swo17
+*.swo18
+*.swo19
+*.swo20

@@ -1,0 +1,80 @@
+{
+  "trace_id": "string (uuid)",
+  "thesis_input": "string (the raw input statement)",
+  "domain": "string (field of study)",
+  "model_used": "string",
+  "initial_claim": {
+    "claim_id": "string",
+    "central_claim": "string (the core proposition)",
+    "scope": "string (defined boundaries of the claim)",
+    "assumptions": [
+      {
+        "id": "string (e.g., A1)",
+        "text": "string (the underlying premise)",
+        "grounding": "string (source or reasoning type)",
+        "grounding_type": "string (e.g., empirical, theoretical, normative)"
+      }
+    ],
+    "inferential_chain": [
+      {
+        "id": "string (e.g., I1)",
+        "from_premise": "string (ID of assumption or prior inference)",
+        "to_conclusion": "string (the logical step reached)",
+        "inference_type": "string (e.g., deductive, inductive)",
+        "logical_gap_score": "float (0.0 to 1.0)"
+      }
+    ],
+    "stated_evidence": [
+      "string (list of supporting facts/data)"
+    ],
+    "falsifiability_check": "boolean"
+  },
+  "questions": [
+    {
+      "question_id": "string",
+      "layer": "string (e.g., FOUNDATION, MACHINERY, PERIMETER)",
+      "target_element_id": "string (ID of the targeted element)",
+      "question_text": "string (the critical inquiry)",
+      "failure_mode_targeted": "string (e.g., non_sequitur, ungrounded_assertion)",
+      "interrogator_reasoning": "string (logic behind the question)"
+    }
+  ],
+  "revision": {
+    "revision_id": "string",
+    "prior_claim_id": "string",
+    "responses": [
+      {
+        "question_id": "string",
+        "question_verbatim": "string",
+        "revision_type": "string (e.g., patch_assumption, narrow_scope)",
+        "element_modified": "string",
+        "before": "string",
+        "after": "string",
+        "response_to_question": "string (explanation of the change)",
+        "self_assessed_revision_strength": "float (0.0 to 1.0)"
+      }
+    ],
+    "revised_claim": "object (matches the structure of initial_claim)"
+  },
+  "final_claim": "object (the finalized claim structure after all revisions)",
+  "score": {
+    "validity_score": "float",
+    "soundness_score": "float",
+    "resilience_score": "float",
+    "precision_score": "float",
+    "composite_score": "float",
+    "evasion_flags": [
+      "string (status of response integrity)"
+    ],
+    "judge_commentary": "string (qualitative assessment)"
+  },
+  "initial_claim_summary": "string",
+  "attack_summary": "string",
+  "revision_summary": "string",
+  "final_claim_summary": "string",
+  "net_improvement_delta": "float",
+  "key_inflection": "string",
+  "collapse_detected": "boolean",
+  "collapse_reason": "string (null if false)",
+  "baseline_comparison_id": "string (null if N/A)"
+}
