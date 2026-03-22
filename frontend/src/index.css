@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary-50: oklch(0.97 0.02 265);
+  --color-primary-100: oklch(0.94 0.04 265);
+  --color-primary-200: oklch(0.88 0.08 265);
+  --color-primary-300: oklch(0.79 0.13 265);
+  --color-primary-400: oklch(0.68 0.18 265);
+  --color-primary-500: oklch(0.59 0.22 265);
+  --color-primary-600: oklch(0.51 0.24 265);
+  --color-primary-700: oklch(0.45 0.22 265);
+  --color-primary-800: oklch(0.39 0.18 265);
+  --color-primary-900: oklch(0.34 0.14 265);
+}
+
+/* -- Circular Progress Ring -- */
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* -- Diff Component -- */
+.diff-before {
+  background-color: oklch(0.94 0.04 25);
+}
+.diff-after {
+  background-color: oklch(0.94 0.04 145);
+}
+
+/* -- Scroll Animations -- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* -- Custom Scrollbar -- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.7 0.01 265);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.55 0.02 265);
+}

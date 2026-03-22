@@ -79,8 +79,8 @@ class CognitiveTrace(BaseModel):
     final_claim: LogicalClaim
     score: EpistemicScore
     initial_claim_summary: str
-    attack_summary: str
-    revision_summary: str
+    attack_summary: str | list[str]
+    revision_summary: str | list[str]
     final_claim_summary: str
     net_improvement_delta: float
     key_inflection: str

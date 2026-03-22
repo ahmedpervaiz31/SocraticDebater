@@ -1,0 +1,288 @@
+{
+  "trace_id": "d11fd7a5-7394-4a22-a576-e32daca689ce",
+  "thesis_input": "AI has done more harm than good for the education sector\n\n",
+  "domain": "Education Technology",
+  "model_used": "Gemini-3-Flash",
+  "initial_claim": {
+    "claim_id": "34567890-1234-1234-1234-123456789012",
+    "central_claim": "The integration of AI in the education sector has resulted in more detrimental effects than benefits.",
+    "scope": "The education sector, encompassing primary, secondary, and higher education institutions globally, from 2010 to the present day.",
+    "assumptions": [
+      {
+        "id": "A1",
+        "text": "AI-driven educational tools often prioritize efficiency over educational quality.",
+        "grounding": "Studies on AI in education have shown that the rush to adopt AI can lead to overlooking crucial aspects of learning, such as critical thinking and creativity.",
+        "grounding_type": "empirical"
+      },
+      {
+        "id": "A2",
+        "text": "The increased reliance on AI in education exacerbates existing inequalities in access to quality education.",
+        "grounding": "Data has consistently shown that students from disadvantaged backgrounds have less access to the technology and internet connectivity required for AI-driven learning tools.",
+        "grounding_type": "empirical"
+      },
+      {
+        "id": "A3",
+        "text": "AI systems can perpetuate and amplify biases present in the data used to train them, affecting student assessment and feedback.",
+        "grounding": "Research has demonstrated that biased AI systems can unfairly disadvantage certain groups of students, impacting their academic performance and opportunities.",
+        "grounding_type": "empirical"
+      },
+      {
+        "id": "A4",
+        "text": "The over-reliance on AI for instructional purposes can lead to a lack of human interaction, which is essential for a well-rounded education.",
+        "grounding": "Educational theory emphasizes the importance of human interaction for social, emotional, and cognitive development.",
+        "grounding_type": "definitional"
+      },
+      {
+        "id": "A5",
+        "text": "The deployment of AI in education is often driven by economic interests rather than educational needs.",
+        "grounding": "The significant investment in AI education technology is frequently motivated by profit rather than a genuine commitment to improving educational outcomes.",
+        "grounding_type": "axiomatic"
+      }
+    ],
+    "inferential_chain": [
+      {
+        "id": "I1",
+        "from_premise": "A1, A2",
+        "to_conclusion": "The adoption of AI in education has negative consequences on educational quality and equity.",
+        "inference_type": "deductive",
+        "logical_gap_score": 0.2
+      },
+      {
+        "id": "I2",
+        "from_premise": "I1, A3, A4",
+        "to_conclusion": "These negative consequences, including biased assessments and lack of human interaction, outweigh any potential benefits of AI in education.",
+        "inference_type": "inductive",
+        "logical_gap_score": 0.4
+      },
+      {
+        "id": "I3",
+        "from_premise": "I2, A5",
+        "to_conclusion": "Therefore, the integration of AI in the education sector has resulted in more harm than good, primarily due to the prioritization of economic interests over educational well-being.",
+        "inference_type": "abductive",
+        "logical_gap_score": 0.6
+      }
+    ],
+    "stated_evidence": [
+      "A study by the OECD found that excessive technology use in classrooms can hinder student performance.",
+      "The UNESCO report on AI in education highlighted the need for a balanced approach to avoid exacerbating educational inequalities.",
+      "The work of educational theorist Neil Postman critiques the unexamined adoption of technology in education, emphasizing the importance of human interaction."
+    ],
+    "falsifiability_check": true
+  },
+  "questions": [
+    {
+      "question_id": "Q1",
+      "layer": "FOUNDATION",
+      "target_element_id": "A5",
+      "question_text": "How can the claim that the deployment of AI in education is driven by economic interests rather than educational needs be considered axiomatic when it appears to be a value judgment that requires empirical grounding?",
+      "failure_mode_targeted": "ungrounded_assertion",
+      "interrogator_reasoning": "The assumption that AI in education is primarily driven by economic interests is presented as axiomatic without clear justification, which may not be universally true."
+    },
+    {
+      "question_id": "Q2",
+      "layer": "MACHINERY",
+      "target_element_id": "I2",
+      "question_text": "Does the inference from premises I1, A3, and A4 to the conclusion that negative consequences of AI in education outweigh any potential benefits not commit an illicit conversion by assuming that the existence of negative consequences necessarily means they outweigh the benefits?",
+      "failure_mode_targeted": "illicit_conversion",
+      "interrogator_reasoning": "The step from recognizing negative consequences to concluding they outweigh benefits seems to require additional premises about the magnitude or significance of these consequences relative to benefits."
+    },
+    {
+      "question_id": "Q3",
+      "layer": "PERIMETER",
+      "target_element_id": "SCOPE",
+      "question_text": "Would the central claim still hold if it were limited to only those educational contexts where AI integration has been carefully designed to mitigate biases, ensure equity, and prioritize educational quality over efficiency?",
+      "failure_mode_targeted": "trivial_or_false_scope",
+      "interrogator_reasoning": "Restricting the scope to well-designed AI integrations could reveal that the claim's broad applicability might be compromised, making it either trivial or false."
+    }
+  ],
+  "revision": {
+    "revision_id": "123e4567-e89b-12d3-a456-426655440000",
+    "prior_claim_id": "34567890-1234-1234-1234-123456789012",
+    "responses": [
+      {
+        "question_id": "Q1",
+        "question_verbatim": "How can the claim that the deployment of AI in education is driven by economic interests rather than educational needs be considered axiomatic when it appears to be a value judgment that requires empirical grounding?",
+        "revision_type": "patch_assumption",
+        "element_modified": "A5",
+        "before": "The deployment of AI in education is often driven by economic interests rather than educational needs.",
+        "after": "Research indicates that a significant portion of AI deployment in education is driven by economic interests, such as cost savings and market expansion, rather than solely by educational needs.",
+        "response_to_question": "The claim regarding the deployment of AI in education being driven by economic interests rather than educational needs should not be considered axiomatic. Instead, empirical evidence supports the notion that economic factors play a substantial role in the adoption and implementation of AI in educational settings. For instance, studies have shown that the push for AI in education is often motivated by the potential for cost savings, increased efficiency, and the expansion of educational technology markets. Therefore, acknowledging the empirical grounding for this claim provides a more nuanced understanding of the factors driving AI integration in education.",
+        "self_assessed_revision_strength": 0.8
+      },
+      {
+        "question_id": "Q2",
+        "question_verbatim": "Does the inference from premises I1, A3, and A4 to the conclusion that negative consequences of AI in education outweigh any potential benefits not commit an illicit conversion by assuming that the existence of negative consequences necessarily means they outweigh the benefits?",
+        "revision_type": "restructure_inference",
+        "element_modified": "I2",
+        "before": "These negative consequences, including biased assessments and lack of human interaction, outweigh any potential benefits of AI in education.",
+        "after": "Given the significance and prevalence of negative consequences such as biased assessments and the lack of human interaction, alongside the limited and context-dependent nature of AI's benefits in education, it can be inferred that the negative consequences often outweigh the benefits in many educational contexts.",
+        "response_to_question": "The inference from the premises to the conclusion does indeed commit an illicit conversion by assuming the existence of negative consequences automatically means they outweigh the benefits. To correct this, the inference should be restructured to account for the comparative analysis of the magnitude and significance of both negative consequences and potential benefits. By acknowledging that the outweighing of benefits by negative consequences is context-dependent and considering the empirical evidence on the limited and specific benefits of AI in education, we can more accurately assess the balance between the negative consequences and the benefits. This approach recognizes that while AI may offer some benefits, the pervasive and significant negative consequences often tip the scale, especially in contexts where AI integration is not carefully managed.",
+        "self_assessed_revision_strength": 0.9
+      },
+      {
+        "question_id": "Q3",
+        "question_verbatim": "Would the central claim still hold if it were limited to only those educational contexts where AI integration has been carefully designed to mitigate biases, ensure equity, and prioritize educational quality over efficiency?",
+        "revision_type": "narrow_scope",
+        "element_modified": "SCOPE",
+        "before": "The education sector, encompassing primary, secondary, and higher education institutions globally, from 2010 to the present day.",
+        "after": "The education sector, specifically focusing on contexts where AI integration lacks careful design for mitigating biases, ensuring equity, and prioritizing educational quality, from 2010 to the present day.",
+        "response_to_question": "The central claim may not hold in contexts where AI integration has been meticulously designed to mitigate biases, ensure equity, and prioritize educational quality. In such cases, the detrimental effects of AI in education might be minimized, and the benefits could potentially outweigh the drawbacks. However, the claim's validity is more pronounced in scenarios where AI integration has been hastily or poorly implemented, leading to exacerbated inequalities and diminished educational quality. By narrowing the scope to focus on these specific contexts, we highlight the importance of thoughtful AI integration in education and underscore the need for careful consideration of educational quality and equity in the development and implementation of AI-driven educational tools.",
+        "self_assessed_revision_strength": 0.7
+      }
+    ],
+    "revised_claim": {
+      "claim_id": "90123456-7890-7890-7890-012345678901",
+      "central_claim": "The integration of AI in the education sector, particularly in contexts where its implementation prioritizes efficiency and economic interests over educational quality and equity, has resulted in more detrimental effects than benefits.",
+      "scope": "The education sector, specifically focusing on contexts where AI integration lacks careful design for mitigating biases, ensuring equity, and prioritizing educational quality, from 2010 to the present day.",
+      "assumptions": [
+        {
+          "id": "A1",
+          "text": "AI-driven educational tools often prioritize efficiency over educational quality.",
+          "grounding": "Studies on AI in education have shown that the rush to adopt AI can lead to overlooking crucial aspects of learning, such as critical thinking and creativity.",
+          "grounding_type": "empirical"
+        },
+        {
+          "id": "A2",
+          "text": "The increased reliance on AI in education exacerbates existing inequalities in access to quality education.",
+          "grounding": "Data has consistently shown that students from disadvantaged backgrounds have less access to the technology and internet connectivity required for AI-driven learning tools.",
+          "grounding_type": "empirical"
+        },
+        {
+          "id": "A3",
+          "text": "AI systems can perpetuate and amplify biases present in the data used to train them, affecting student assessment and feedback.",
+          "grounding": "Research has demonstrated that biased AI systems can unfairly disadvantage certain groups of students, impacting their academic performance and opportunities.",
+          "grounding_type": "empirical"
+        },
+        {
+          "id": "A4",
+          "text": "The over-reliance on AI for instructional purposes can lead to a lack of human interaction, which is essential for a well-rounded education.",
+          "grounding": "Educational theory emphasizes the importance of human interaction for social, emotional, and cognitive development.",
+          "grounding_type": "definitional"
+        },
+        {
+          "id": "A5",
+          "text": "Research indicates that a significant portion of AI deployment in education is driven by economic interests, such as cost savings and market expansion, rather than solely by educational needs.",
+          "grounding": "Studies have shown that the push for AI in education is often motivated by the potential for cost savings, increased efficiency, and the expansion of educational technology markets.",
+          "grounding_type": "empirical"
+        }
+      ],
+      "inferential_chain": [
+        {
+          "id": "I1",
+          "from_premise": "A1, A2",
+          "to_conclusion": "The adoption of AI in education has negative consequences on educational quality and equity.",
+          "inference_type": "deductive",
+          "logical_gap_score": 0.2
+        },
+        {
+          "id": "I2",
+          "from_premise": "I1, A3, A4",
+          "to_conclusion": "Given the significance and prevalence of negative consequences such as biased assessments and the lack of human interaction, alongside the limited and context-dependent nature of AI's benefits in education, it can be inferred that the negative consequences often outweigh the benefits in many educational contexts.",
+          "inference_type": "inductive",
+          "logical_gap_score": 0.4
+        },
+        {
+          "id": "I3",
+          "from_premise": "I2, A5",
+          "to_conclusion": "Therefore, the integration of AI in the education sector, particularly in contexts where its implementation prioritizes efficiency and economic interests over educational quality and equity, has resulted in more harm than good, primarily due to the prioritization of economic interests over educational well-being.",
+          "inference_type": "abductive",
+          "logical_gap_score": 0.6
+        }
+      ],
+      "stated_evidence": [
+        "A study by the OECD found that excessive technology use in classrooms can hinder student performance.",
+        "The UNESCO report on AI in education highlighted the need for a balanced approach to avoid exacerbating educational inequalities.",
+        "The work of educational theorist Neil Postman critiques the unexamined adoption of technology in education, emphasizing the importance of human interaction."
+      ],
+      "falsifiability_check": true
+    }
+  },
+  "final_claim": {
+    "claim_id": "90123456-7890-7890-7890-012345678901",
+    "central_claim": "The integration of AI in the education sector, particularly in contexts where its implementation prioritizes efficiency and economic interests over educational quality and equity, has resulted in more detrimental effects than benefits.",
+    "scope": "The education sector, specifically focusing on contexts where AI integration lacks careful design for mitigating biases, ensuring equity, and prioritizing educational quality, from 2010 to the present day.",
+    "assumptions": [
+      {
+        "id": "A1",
+        "text": "AI-driven educational tools often prioritize efficiency over educational quality.",
+        "grounding": "Studies on AI in education have shown that the rush to adopt AI can lead to overlooking crucial aspects of learning, such as critical thinking and creativity.",
+        "grounding_type": "empirical"
+      },
+      {
+        "id": "A2",
+        "text": "The increased reliance on AI in education exacerbates existing inequalities in access to quality education.",
+        "grounding": "Data has consistently shown that students from disadvantaged backgrounds have less access to the technology and internet connectivity required for AI-driven learning tools.",
+        "grounding_type": "empirical"
+      },
+      {
+        "id": "A3",
+        "text": "AI systems can perpetuate and amplify biases present in the data used to train them, affecting student assessment and feedback.",
+        "grounding": "Research has demonstrated that biased AI systems can unfairly disadvantage certain groups of students, impacting their academic performance and opportunities.",
+        "grounding_type": "empirical"
+      },
+      {
+        "id": "A4",
+        "text": "The over-reliance on AI for instructional purposes can lead to a lack of human interaction, which is essential for a well-rounded education.",
+        "grounding": "Educational theory emphasizes the importance of human interaction for social, emotional, and cognitive development.",
+        "grounding_type": "definitional"
+      },
+      {
+        "id": "A5",
+        "text": "Research indicates that a significant portion of AI deployment in education is driven by economic interests, such as cost savings and market expansion, rather than solely by educational needs.",
+        "grounding": "Studies have shown that the push for AI in education is often motivated by the potential for cost savings, increased efficiency, and the expansion of educational technology markets.",
+        "grounding_type": "empirical"
+      }
+    ],
+    "inferential_chain": [
+      {
+        "id": "I1",
+        "from_premise": "A1, A2",
+        "to_conclusion": "The adoption of AI in education has negative consequences on educational quality and equity.",
+        "inference_type": "deductive",
+        "logical_gap_score": 0.2
+      },
+      {
+        "id": "I2",
+        "from_premise": "I1, A3, A4",
+        "to_conclusion": "Given the significance and prevalence of negative consequences such as biased assessments and the lack of human interaction, alongside the limited and context-dependent nature of AI's benefits in education, it can be inferred that the negative consequences often outweigh the benefits in many educational contexts.",
+        "inference_type": "inductive",
+        "logical_gap_score": 0.4
+      },
+      {
+        "id": "I3",
+        "from_premise": "I2, A5",
+        "to_conclusion": "Therefore, the integration of AI in the education sector, particularly in contexts where its implementation prioritizes efficiency and economic interests over educational quality and equity, has resulted in more harm than good, primarily due to the prioritization of economic interests over educational well-being.",
+        "inference_type": "abductive",
+        "logical_gap_score": 0.6
+      }
+    ],
+    "stated_evidence": [
+      "A study by the OECD found that excessive technology use in classrooms can hinder student performance.",
+      "The UNESCO report on AI in education highlighted the need for a balanced approach to avoid exacerbating educational inequalities.",
+      "The work of educational theorist Neil Postman critiques the unexamined adoption of technology in education, emphasizing the importance of human interaction."
+    ],
+    "falsifiability_check": true
+  },
+  "score": {
+    "validity_score": 0.7,
+    "soundness_score": 0.85,
+    "resilience_score": 0.73,
+    "precision_score": 0.8,
+    "composite_score": 0.76,
+    "evasion_flags": [
+      "Q1: CLEAN",
+      "Q2: CLEAN",
+      "Q3: CLEAN"
+    ],
+    "judge_commentary": "The revised claim demonstrates improvement in addressing the criticisms raised, particularly in grounding assumptions empirically and restructuring inferences for clarity. However, there is room for further refinement in the precision of the central claim and the scope of the argument."
+  },
+  "initial_claim_summary": "The integration of AI in education has more detrimental effects than benefits.",
+  "attack_summary": "The claim is challenged on the grounds of ungrounded assumptions, illicit inferences, and potentially trivial or false scope.",
+  "revision_summary": "Revisions include grounding assumptions empirically, restructuring inferences for clarity, and narrowing the scope to focus on contexts where AI integration is poorly designed.",
+  "final_claim_summary": "The integration of AI in education, particularly in contexts prioritizing efficiency and economic interests over educational quality and equity, has resulted in more detrimental effects than benefits.",
+  "net_improvement_delta": 0.2,
+  "key_inflection": "The recognition of the need for empirical grounding of assumptions and the restructuring of inferences to avoid illicit conversions.",
+  "collapse_detected": false,
+  "collapse_reason": null,
+  "baseline_comparison_id": null
+}
